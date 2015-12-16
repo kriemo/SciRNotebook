@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "title": "December 16, 2015" ,
+      "body": "      Tags  First entry ",
+      "preview": "      Tags  First entry ",
+      "href": "12-16-2015_entry.Rmd",
+      "tags": "First entry "
+    } ,
+    {
+      "title": "Lab Notebook",
+      "body": "author   Your Name Here  date   1 1 2015       r echo   F  message   F  source     scripts wordcloud generator R         p   img style  float  right   src  libs wordcloud trim jpeg  alt  wordcloud  width  300  height  300     This is my attempt at making an electronic  version controlled  lab notebook    p        Lab Experiments    12 16 2015 First entry   12 16 2015 entry html             Tags  toc ",
+      "preview": "author   Your Name Here  date   1 1 2015       r echo   F  message   F  source     scripts wordcloud generator R         p   img style  float  right   src  libs wordcloud trim jpeg  alt  wordcloud  width  300  height  300     This is my attempt at making an electronic  version controlled  lab notebo",
+      "href": "Notebook_toc.Rmd",
+      "tags": "toc "
+    } ,
+    {
+      "title": "Search" ,
+      "body": "  div class  content  id  content    input placeholder  Search   type  search  id  search  class  search input    div id  results  class  all posts results    div    div       span style  color white        Tags  search   span   powered by  lunr js  http   lunrjs com   ",
+      "preview": "  div class  content  id  content    input placeholder  Search   type  search  id  search  class  search input    div id  results  class  all posts results    div    div       span style  color white        Tags  search   span   powered by  lunr js  http   lunrjs com   ",
+      "href": "Search.Rmd",
+      "tags": "  color white        Tags  search   span  "
+    } ,
+    {
+      "title": "dummy_entry",
+      "body": "foo bar",
+      "preview": "more foo than bar",
+      "href": "../Notebook_toc.Rmd",
+      "tags": "dummy_entry"
+    }
+    ]
+}

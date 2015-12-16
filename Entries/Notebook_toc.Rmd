@@ -1,0 +1,25 @@
+---
+title: "Lab Notebook"
+author: "Your Name Here"
+date: "1/1/2015"
+output: html_document
+---
+
+```{r echo = F, message = F}
+source("../scripts/wordcloud_generator.R")
+```
+
+<p>
+<img style="float: right;" src="libs/wordcloud_trim.jpeg" alt="wordcloud" width="300" height="300" />
+This is my attempt at making an electronic, version controlled, lab notebook.
+</p>
+
+
+
+
+# Lab Experiments
+  [12-16-2015 First entry ](12-16-2015_entry.html)
+ 
+  
+
+#### Tags: toc

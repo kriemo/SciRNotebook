@@ -1,0 +1,14 @@
+---
+title: "Search" 
+output: html_document 
+--- 
+
+<div class="content" id="content">
+<input placeholder="Search…" type="search" id="search" class="search-input">
+<div id="results" class="all-posts results"></div>
+</div>
+  
+
+<span style="color:white"> #### Tags: search </span>
+
+powered by [lunr.js](http://lunrjs.com/)
