@@ -5,7 +5,7 @@ date: "12/16/2015"
 output: 
 html_document:
   theme: cosmo
-  highlight: textmate
+  highlight: tango
 ---
 
 
@@ -30,14 +30,68 @@ html_document:
   * polyfill.js
 
 ## Usage
-  * cd to SciRNotebook/ directory
-  * edit new_notebook_entry.sh line X to list your installed (note use pwd to edit this automatically)
-  * edit Entries/_output.yaml theme type to desired bootstrap theme
-    - Available themes are default, cerulean, journal, flatly, readable, spacelab, united, cosmo
-    - Also can edit the text highlight scheme for syntax highlighting in the _output.yaml file
-    - The current _output.yaml uses cosmo
-  * add your first entry to the Notebook_toc.Rmd document using the new_notebook_entry.sh script
-    - scripts/new_notebook_entry.sh "my first entry"
-  * render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh
-    - scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd
-    - scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd
+
+#### Example notebook entry
+
+```
+cd SciRNotebook/Entries
+```
+
+Take a look at the Example.Rmd and Example.html files to see how 4to use markdown syntax to link html documents together and how to reference local data files. 
+
+#### To add a new entry
+
+```
+cd SciRNotebook/
+```
+
+add your first entry to the Notebook_toc.Rmd document using the new_notebook_entry.sh script
+
+``` 
+scripts/new_notebook_entry.sh "my first entry"  
+```
+
+render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh 
+
+```
+scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd  
+scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd  
+```
+Open up the Notebook_toc.html to navigate the notebook.
+
+#### Themes
+To customize the outlook you can change the bootstrap theme. The current default is cosmo but you can change it to other themes.  
+
+  * Available themes are default, cerulean, journal, flatly, readable, spacelab, united, cosmo  
+  * Also can edit the text highlight scheme for syntax highlighting in the _output.yaml file  
+  
+To change the theme edit Entries/_output.yaml theme type to desired bootstrap theme in the following manner. 
+
+Default _output.yaml with cosmo theme  
+```
+ html_document:
+  self_contained: false
+  theme: cosmo
+  highlight: textmate
+  lib_dir: libs
+  includes:
+    in_header: include/in_header.html
+    before_body: include/before_body.html
+```
+_output.yaml with united theme  
+
+```
+ html_document:  
+  self_contained: false  
+  theme: united  
+  highlight: textmate  
+ lib_dir: libs  
+  includes: 
+    in_header: include/in_header.html  
+    before_body: include/before_body.html  
+```
+
+##Credits
+This format was mostly inspired by the RMarkdown documentation website. 
+
+  

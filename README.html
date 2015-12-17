@@ -101,25 +101,53 @@ img {
 </div>
 <div id="usage" class="section level2">
 <h2>Usage</h2>
+<div id="example-notebook-entry" class="section level4">
+<h4>Example notebook entry</h4>
+<pre><code>cd SciRNotebook/Entries</code></pre>
+<p>Take a look at the Example.Rmd and Example.html files to see how 4to use markdown syntax to link html documents together and how to reference local data files.</p>
+</div>
+<div id="to-add-a-new-entry" class="section level4">
+<h4>To add a new entry</h4>
+<pre><code>cd SciRNotebook/</code></pre>
+<p>add your first entry to the Notebook_toc.Rmd document using the new_notebook_entry.sh script</p>
+<pre><code>scripts/new_notebook_entry.sh &quot;my first entry&quot;  </code></pre>
+<p>render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh</p>
+<pre><code>scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd  
+scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd  </code></pre>
+<p>Open up the Notebook_toc.html to navigate the notebook.</p>
+</div>
+<div id="themes" class="section level4">
+<h4>Themes</h4>
+<p>To customize the outlook you can change the bootstrap theme. The current default is cosmo but you can change it to other themes.</p>
 <ul>
-<li>cd to SciRNotebook/ directory</li>
-<li>edit new_notebook_entry.sh line X to list your installed (note use pwd to edit this automatically)</li>
-<li>edit Entries/_output.yaml theme type to desired bootstrap theme
-<ul>
-<li>Available themes are default, cerulean, journal, flatly, readable, spacelab, united, cosmo</li>
+<li>Available themes are default, cerulean, journal, flatly, readable, spacelab, united, cosmo<br />
+</li>
 <li>Also can edit the text highlight scheme for syntax highlighting in the _output.yaml file</li>
-<li>The current _output.yaml uses cosmo</li>
-</ul></li>
-<li>add your first entry to the Notebook_toc.Rmd document using the new_notebook_entry.sh script
-<ul>
-<li>scripts/new_notebook_entry.sh “my first entry”</li>
-</ul></li>
-<li>render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh
-<ul>
-<li>scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd</li>
-<li>scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd</li>
-</ul></li>
 </ul>
+<p>To change the theme edit Entries/_output.yaml theme type to desired bootstrap theme in the following manner.</p>
+<p>Default _output.yaml with cosmo theme</p>
+<pre><code> html_document:
+  self_contained: false
+  theme: cosmo
+  highlight: textmate
+  lib_dir: libs
+  includes:
+    in_header: include/in_header.html
+    before_body: include/before_body.html</code></pre>
+<p>_output.yaml with united theme</p>
+<pre><code> html_document:  
+  self_contained: false  
+  theme: united  
+  highlight: textmate  
+ lib_dir: libs  
+  includes: 
+    in_header: include/in_header.html  
+    before_body: include/before_body.html  </code></pre>
+</div>
+</div>
+<div id="credits" class="section level2">
+<h2>Credits</h2>
+<p>This format was mostly inspired by the RMarkdown documentation website.</p>
 </div>
 
 

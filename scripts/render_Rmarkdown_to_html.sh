@@ -9,7 +9,12 @@ set -e
 set -u
 set -o pipefail
 
-input_file=$1
+if [[ "$#" -eq 0 ]]; then
+       echo "Usage: $0 Markdown_document.Rmd"
+       exit 1
+fi
+
+input_file="$1"
 
 echo "rendering "$input_file "to Html"
 

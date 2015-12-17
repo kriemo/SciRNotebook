@@ -9,13 +9,20 @@
 # be modified if the notebook_toc.Rmd format is altered, or
 # if the directory structure is modifeed
 # 
-
+ 
+ 
 set -e
 set -u
 set -o pipefail
 
+if [[ "$#" -eq 0 ]]; then
+       echo "Usage: $0 'Title of new Rmd document in quotes'"
+       exit 1
+fi
+
+
 # change this variable to notebook working directory
-notedir="/Users/kriemo/Software/SciRNotebook"
+#notedir="/Users/kriemo/Software/SciRNotebook"
 
 # grab title and dates
 
@@ -31,18 +38,18 @@ output: html_document
 --- 
 
 #### Tags: '$title \
-	> ${notedir}"/Entries/"$d"_entry.Rmd"
+	> "/Entries/"$d"_entry.Rmd"
 
 # append title dates and filename to notebook TOC entry
 
 sed -i '' -e '/\#\ Lab\ Experiments/ a\
 \ \ ['${d}' '"${title}"' ]('${d}'_entry.html)\
 \ 
-' ${notedir}"/Entries/Notebook_toc.Rmd" 
+' /Entries/Notebook_toc.Rmd 
 
 # Reindex lunr.js database
 
-cd ${notedir}"/Entries"
+cd /Entries
 
 echo '{
   "files": [' > database.json
@@ -91,6 +98,6 @@ mv temp.json lunr.json
 
 # open up the new RMarkdown files
 
-open ${notedir}"/Entries/"$d"_entry.Rmd" -a RStudio
+open /Entries/"$d"_entry.Rmd" -a RStudio
 
-open ${notedir}"/Entries/Notebook_toc.Rmd" -a RStudio
+open /Entries/Notebook_toc.Rmd" -a RStudio
