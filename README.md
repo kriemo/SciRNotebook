@@ -90,8 +90,10 @@ _output.yaml with united theme
     in_header: include/in_header.html  
     before_body: include/before_body.html  
 ```
+#### Wordcloud
+A wordcloud is displayed on the Notebook_toc.html page. This wordcloud is derived from teh database.json file used for indexing the lunr.js search. Words can be removed from the wordcloud by editing the wordcloud_generator.R script and adding words to the `badwords` variable. 
 
-##Credits
+## Credits
 This format was mostly inspired by the RMarkdown documentation website. 
 
   

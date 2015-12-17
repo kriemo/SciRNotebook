@@ -1,0 +1,40 @@
+---
+title: "December 16, 2015"
+output: html_document
+--- 
+
+#### Tags: Example
+
+#### Overall Notebook organization
+For my data I organize my directories as follows
+
+```
+~/Projects/Notebook
+~/Projects/Science_project1
+~/Projects/Science_project2
+```
+
+Then when I want to reference a particular datafile I can use relative links in the Rmd document to link to the data directory/file/analysis etc. 
+
+for example in a daily notebook entry I can put in a link to some analysis:
+```
+
+[link](../../Science_project1/data/super_interesting_result.pdf)
+
+```
+
+This is handy because I can then just backup my Projects directory to a lab shared computer, and the links in the Notebook will still be accurate when viewed on a different computer. Also, if someone wants to find the data, these links provide a method to track raw data all the way through the analysis. 
+
+
+## Example data analysis
+
+Because we are working with RMarkdown we can directly do some analysis in the notebook entry and display figures. 
+
+``` {r read in data and do something}
+dat <- read.table("../Data/example.bed")
+head(dat)
+hist(dat$V5)
+
+```
+
+

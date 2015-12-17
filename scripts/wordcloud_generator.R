@@ -1,12 +1,8 @@
 #!/usr/bin/env Rscript
 # add error handling and usage statement
 
-
-
-
-library(jsonlite)
-library(wordcloud)
-library(tm)
+if (!require("pacman")) install.packages("pacman"); library(pacman)
+p_load(jsonlite, wordcloud, tm)
 
 document <- fromJSON(txt="../Entries/database.json")
 
