@@ -1,5 +1,5 @@
 ---
-title: "December 16, 2015"
+title: "Example notebook usage"
 output: html_document
 --- 
 
