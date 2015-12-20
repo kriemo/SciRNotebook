@@ -15,19 +15,19 @@ html_document:
     - RMarkdown integration with local html web interface
 
 ## Requirements
-  * indexing the lunr.js database requies [node.js](insert link here)
-  * [RMarkdown](website) and [Knitr](website)
-  * [R](website)
-  * R packages tm jsonlite wordcloud
-  * imageMagick (convert function)
+  * indexing the lunr.js database requires [node.js](https://nodejs.org/en/)
+  * [RMarkdown](http://rmarkdown.rstudio.com/) and [Knitr](http://yihui.name/knitr/)
+  * [R](https://www.r-project.org/)
+  * R packages [tm](https://cran.r-project.org/web/packages/tm/index.html) [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) [wordcloud](https://cran.r-project.org/web/packages/wordcloud/index.html) [pacman](https://cran.r-project.org/web/packages/pacman/index.html)
+  * [imageMagick](http://imagemagick.org/script/index.php) (convert function)
   * Only tested on Mac OS 10.10 as of now
   
 ## Included packages
-  * jquery-1.11.0
-  * lunr.js
-  * bootstrap-3.3.1
-  * font-awesome-4.1.0
-  * polyfill.js
+  * [jquery-1.11.0](http://jquery.com/)
+  * [lunr.js](http://lunrjs.com/)
+  * [bootstrap-3.3.1](https://github.com/twbs/bootstrap)
+  * [font-awesome-4.1.0](https://fortawesome.github.io/Font-Awesome/)
+  * [polyfill.js](https://philipwalton.github.io/polyfill/)
 
 ## Usage
 
@@ -37,7 +37,7 @@ html_document:
 cd SciRNotebook/Entries
 ```
 
-Take a look at the Example.Rmd and Example.html files to see how 4to use markdown syntax to link html documents together and how to reference local data files. 
+Take a look at the Example.Rmd and Example.html files to see how to use markdown syntax to link html documents together and how to reference local data files. 
 
 #### To add a new entry
 
@@ -90,8 +90,12 @@ _output.yaml with united theme
     in_header: include/in_header.html  
     before_body: include/before_body.html  
 ```
+
+#### Customizing header navbar links
+The html that controls the links in the navbar is located in the `Entries/include/before_header.html` file. Edit the "dummy links" included to link to .html files of interest. 
+
 #### Wordcloud
-A wordcloud is displayed on the Notebook_toc.html page. This wordcloud is derived from teh database.json file used for indexing the lunr.js search. Words can be removed from the wordcloud by editing the wordcloud_generator.R script and adding words to the `badwords` variable. 
+A wordcloud is displayed on the Notebook_toc.html page. This wordcloud is derived from the database.json file used for indexing the lunr.js search. Words can be removed from the wordcloud by editing the wordcloud_generator.R script and adding words to the `badwords` variable. If you want to disable the wordcloud, remove the html code in lines 12-15 of the Entries/Notebook_toc.Rmd file.
 
 ## Credits
 This format was mostly inspired by the RMarkdown documentation website. 

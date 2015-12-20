@@ -1,6 +1,0 @@
----
-title: "December 16, 2015" 
-output: html_document 
---- 
-
-#### Tags: First entry

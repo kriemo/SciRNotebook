@@ -81,22 +81,22 @@ img {
 <div id="requirements" class="section level2">
 <h2>Requirements</h2>
 <ul>
-<li>indexing the lunr.js database requies <a href="insert%20link%20here">node.js</a></li>
-<li><a href="website">RMarkdown</a> and <a href="website">Knitr</a></li>
-<li><a href="website">R</a></li>
-<li>R packages tm jsonlite wordcloud</li>
-<li>imageMagick (convert function)</li>
+<li>indexing the lunr.js database requires <a href="https://nodejs.org/en/">node.js</a></li>
+<li><a href="http://rmarkdown.rstudio.com/">RMarkdown</a> and <a href="http://yihui.name/knitr/">Knitr</a></li>
+<li><a href="https://www.r-project.org/">R</a></li>
+<li>R packages <a href="https://cran.r-project.org/web/packages/tm/index.html">tm</a> <a href="https://cran.r-project.org/web/packages/jsonlite/index.html">jsonlite</a> <a href="https://cran.r-project.org/web/packages/wordcloud/index.html">wordcloud</a> <a href="https://cran.r-project.org/web/packages/pacman/index.html">pacman</a></li>
+<li><a href="http://imagemagick.org/script/index.php">imageMagick</a> (convert function)</li>
 <li>Only tested on Mac OS 10.10 as of now</li>
 </ul>
 </div>
 <div id="included-packages" class="section level2">
 <h2>Included packages</h2>
 <ul>
-<li>jquery-1.11.0</li>
-<li>lunr.js</li>
-<li>bootstrap-3.3.1</li>
-<li>font-awesome-4.1.0</li>
-<li>polyfill.js</li>
+<li><a href="http://jquery.com/">jquery-1.11.0</a></li>
+<li><a href="http://lunrjs.com/">lunr.js</a></li>
+<li><a href="https://github.com/twbs/bootstrap">bootstrap-3.3.1</a></li>
+<li><a href="https://fortawesome.github.io/Font-Awesome/">font-awesome-4.1.0</a></li>
+<li><a href="https://philipwalton.github.io/polyfill/">polyfill.js</a></li>
 </ul>
 </div>
 <div id="usage" class="section level2">
@@ -104,7 +104,7 @@ img {
 <div id="example-notebook-entry" class="section level4">
 <h4>Example notebook entry</h4>
 <pre><code>cd SciRNotebook/Entries</code></pre>
-<p>Take a look at the Example.Rmd and Example.html files to see how 4to use markdown syntax to link html documents together and how to reference local data files.</p>
+<p>Take a look at the Example.Rmd and Example.html files to see how to use markdown syntax to link html documents together and how to reference local data files.</p>
 </div>
 <div id="to-add-a-new-entry" class="section level4">
 <h4>To add a new entry</h4>
@@ -144,9 +144,13 @@ scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd  </code></pre>
     in_header: include/in_header.html  
     before_body: include/before_body.html  </code></pre>
 </div>
+<div id="customizing-header-navbar-links" class="section level4">
+<h4>Customizing header navbar links</h4>
+<p>The html that controls the links in the navbar is located in the <code>Entries/include/before_header.html</code> file. Edit the “dummy links” included to link to .html files of interest.</p>
+</div>
 <div id="wordcloud" class="section level4">
 <h4>Wordcloud</h4>
-<p>A wordcloud is displayed on the Notebook_toc.html page. This wordcloud is derived from teh database.json file used for indexing the lunr.js search. Words can be removed from the wordcloud by editing the wordcloud_generator.R script and adding words to the <code>badwords</code> variable.</p>
+<p>A wordcloud is displayed on the Notebook_toc.html page. This wordcloud is derived from the database.json file used for indexing the lunr.js search. Words can be removed from the wordcloud by editing the wordcloud_generator.R script and adding words to the <code>badwords</code> variable. If you want to disable the wordcloud, remove the html code in lines 12-15 of the Entries/Notebook_toc.Rmd file.</p>
 </div>
 </div>
 <div id="credits" class="section level2">
