@@ -59,7 +59,7 @@ do echo $file
 scripts/render_Rmarkdown_to_html.sh $file
 done
 ```
-Open up the Notebook_toc.html to navigate the notebook.
+Open up the Notebook_toc.html to navigate the notebook. Check out the coding links in the navbar to navigate to an example document. 
 
 #### Themes
 To customize the outlook you can change the bootstrap theme. The current default is cosmo but you can change it to other themes.  
