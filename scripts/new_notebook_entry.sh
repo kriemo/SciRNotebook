@@ -38,18 +38,18 @@ output: html_document
 --- 
 
 #### Tags: '$title \
-	> "/Entries/"$d"_entry.Rmd"
+	> "Entries/"$d"_entry.Rmd"
 
 # append title dates and filename to notebook TOC entry
 
 sed -i '' -e '/\#\ Lab\ Experiments/ a\
 \ \ ['${d}' '"${title}"' ]('${d}'_entry.html)\
 \ 
-' /Entries/Notebook_toc.Rmd 
+' Entries/Notebook_toc.Rmd 
 
 # Reindex lunr.js database
 
-cd /Entries
+cd Entries/
 
 echo '{
   "files": [' > database.json
@@ -96,8 +96,3 @@ node index.js
 echo -n 'var jsonObject = ' | cat - lunr.json > temp.json
 mv temp.json lunr.json
 
-# open up the new RMarkdown files
-
-open /Entries/"$d"_entry.Rmd" -a RStudio
-
-open /Entries/Notebook_toc.Rmd" -a RStudio
