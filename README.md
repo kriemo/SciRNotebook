@@ -54,8 +54,10 @@ scripts/new_notebook_entry.sh "my first entry"
 render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh 
 
 ```
-scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd  
-scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd  
+for file in Entries/*.Rmd
+do echo $file
+scripts/render_Rmarkdown_to_html.sh $file
+done
 ```
 Open up the Notebook_toc.html to navigate the notebook.
 

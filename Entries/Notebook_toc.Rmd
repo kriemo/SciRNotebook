@@ -18,8 +18,6 @@ This is my attempt at making an electronic, version controlled, lab notebook.
 
 
 # Lab Experiments
-  [12-16-2015 First entry ](12-16-2015_entry.html)
- 
   
 
 #### Tags: toc

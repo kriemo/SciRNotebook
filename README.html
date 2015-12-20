@@ -112,8 +112,10 @@ img {
 <p>add your first entry to the Notebook_toc.Rmd document using the new_notebook_entry.sh script</p>
 <pre><code>scripts/new_notebook_entry.sh &quot;my first entry&quot;  </code></pre>
 <p>render the .Rmd documents Notebook_toc.Rmd and Search.Rmd to .html using knitr and the provided script render_Rmarkdown_to_html.sh</p>
-<pre><code>scripts/render_Rmarkdown_to_html.sh Entries/Notebook_toc.Rmd  
-scripts/render_Rmarkdown_to_html.sh Entries/Search.Rmd  </code></pre>
+<pre><code>for file in Entries/*.Rmd
+do echo $file
+scripts/render_Rmarkdown_to_html.sh $file
+done</code></pre>
 <p>Open up the Notebook_toc.html to navigate the notebook.</p>
 </div>
 <div id="themes" class="section level4">
